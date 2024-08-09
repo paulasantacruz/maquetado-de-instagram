@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal de Instagram</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+        }
+        /* Estilo del encabezado */
+        
+        .header {
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header .logo {
+            font-family: 'Cookie', cursive;
+            font-size: 32px;
+            color: #262626;
+        }
+        
+        .header .search-box {
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 3px;
+            background-color: #fafafa;
+        }
+        
+        .header .search-box input {
+            border: none;
+            background-color: transparent;
+            padding: 5px;
+            outline: none;
+        }
+        
+        .header .menu-icons {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header .menu-icons div {
+            margin-left: 20px;
+            width: 24px;
+            height: 24px;
+            background-color: #ddd;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        /* Estilo del contenedor principal */
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 80px;
+            /* Para evitar que se superponga con el encabezado fijo */
+        }
+        /* Estilo del feed de publicaciones */
+        
+        .feed {
+            width: 600px;
+            margin-right: 30px;
+        }
+        
+        .post {
+            background-color: white;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            border-radius: 3px;
+            padding: 20px;
+        }
+        
+        .post .post-header,
+        .post .post-footer {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .post .post-header .username {
+            font-weight: bold;
+        }
+        
+        .post .post-footer .actions div {
+            width: 24px;
+            height: 24px;
+            background-color: #ddd;
+            margin-right: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .post .post-footer .likes {
+            font-weight: bold;
+        }
+        /* Estilo de la barra lateral */
+        
+        .sidebar {
+            width: 300px;
+        }
+        
+        .sidebar .profile {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .sidebar .profile .username {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .sidebar .stories,
+        .sidebar .suggestions {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 3px;
+        }
+        
+        .sidebar .stories h3,
+        .sidebar .suggestions h3 {
+            margin-top: 0;
+        }
+        
+        .sidebar .stories .story,
+        .sidebar .suggestions .suggestion {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar .stories .story .story-placeholder,
+        .sidebar .suggestions .suggestion .suggestion-placeholder {
+            width: 40px;
+            height: 40px;
+            background-color: #ddd;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .sidebar .stories .story .username,
+        .sidebar .suggestions .suggestion .username {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <div class="header">
+        <div class="logo">Instagram</div>
+        <div class="search-box">
+            <input type="text" placeholder="Buscar">
+        </div>
+        <div class="menu-icons">
+            <div></div>
+            <!-- Icono de inicio -->
+            <div></div>
+            <!-- Icono de Direct -->
+            <div></div>
+            <!-- Icono de explorar -->
+            <div></div>
+            <!-- Icono de notificaciones -->
+            <div></div>
+            <!-- Icono de perfil -->
+        </div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+
+        <!-- Feed de publicaciones -->
+        <div class="feed">
+            <div class="post">
+                <div class="post-header">
+                    <div class="username">usuario1</div>
+                </div>
+                <div class="post-footer">
+                    <div class="actions">
+                        <div></div>
+                        <!-- Icono de like -->
+                        <div></div>
+                        <!-- Icono de comentar -->
+                        <div></div>
+                        <!-- Icono de compartir -->
+                    </div>
+                    <div class="likes">500 Me gusta</div>
+                </div>
+            </div>
+            <!-- Repite la estructura de la publicación según sea necesario -->
+        </div>
+
+        <!-- Barra lateral -->
+        <div class="sidebar">
+            <!-- Perfil del usuario -->
+            <div class="profile">
+                <div class="username">mi_usuario</div>
+            </div>
+
+            <!-- Historias -->
+            <div class="stories">
+                <h3>Historias</h3>
+                <div class="story">
+                    <div class="story-placeholder"></div>
+                    <div class="username">amigo1</div>
+                </div>
+                <div class="story">
+                    <div class="story-placeholder"></div>
+                    <div class="username">amigo2</div>
+                </div>
+                <!-- Agrega más historias según sea necesario -->
+            </div>
+
+            <!-- Sugerencias -->
+            <div class="suggestions">
+                <h3>Sugerencias para ti</h3>
+                <div class="suggestion">
+                    <div class="suggestion-placeholder"></div>
+                    <div class="username">sugerido1</div>
+                </div>
+                <div class="suggestion">
+                    <div class="suggestion-placeholder"></div>
+                    <div class="username">sugerido2</div>
+                </div>
+                <!-- Agrega más sugerencias según sea necesario -->
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
